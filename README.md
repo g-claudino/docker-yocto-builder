@@ -11,7 +11,7 @@ docker build . -t yocto-builder
 ```
 * How to run:
 ```
-docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux --name yocto hiagofranco/yocto-builder:latest /bin/bash
+docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux -e DISPLAY=$DISPLAY --name yocto hiagofranco/yocto-builder:latest /bin/bash
 ```
 Note: replace "Projects" folder and the name of your image with whatever you want.
 * Inspired by B2Open training: https://www.b2open.com/
